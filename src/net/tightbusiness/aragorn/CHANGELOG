@@ -1,0 +1,22 @@
+v1.1.5
+--------------
+FIXED - Crash on back from Edit Endeavor
+FIXED - Notification text mistakes
+FIXED - Occasional repeat entries in recents list 
+
+v1.1.4
+---------------
+ADDED - Support for internationalization (translations underway)
+FIXED - Cancellation of addition now deletes the newly created endeavor
+FIXED - Switching to completed endeavor now does not trigger a completion notification
+FIXED - Did not require global disable keyguard permissions
+
+v1.1.3
+---------------
+FIXED - Switching the active endeavor pushes receiver to recents appropriately
+FIXED - Disabling repeat on running endeavor now calculates cumulative time correctly
+FIXED - Enabling repeat on a running endeavor now mods time correctly
+FIXED - User prevented from creating repeating endeavor with zero goal time
+ADDED - Total cumulative time to title
+FIXED - resetting one should not reset all in the db
+

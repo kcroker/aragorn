@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <net.tightbusiness.aragorn.NumberPickerButton 
+     android:id="@+id/increment"
+     android:layout_width="60dp"
+     android:layout_height="wrap_content"
+     android:text="@string/increment"
+     android:layout_marginTop="0dip"
+     android:layout_marginBottom="0dip"
+     android:layout_marginLeft="0dip"
+     android:layout_marginRight="0dip"
+     />
+        
+  <TextView android:id="@+id/timepicker_input"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center"
+	    android:singleLine="true"
+	    style="?android:attr/textAppearanceLargeInverse"
+	    android:textSize="30sp"
+	    android:textColor="#eeeeee"
+
+	      android:layout_marginTop="0dip"
+     android:layout_marginBottom="0dip"
+     android:layout_marginLeft="0dip"
+     android:layout_marginRight="0dip"
+   
+  	    />
+        
+  <net.tightbusiness.aragorn.NumberPickerButton 
+     android:id="@+id/decrement"
+     android:layout_width="60dp"
+     android:layout_height="wrap_content"
+     android:text="@string/decrement"
+   
+     android:layout_marginTop="0dip"
+     android:layout_marginBottom="0dip"
+     android:layout_marginLeft="0dip"
+     android:layout_marginRight="0dip"
+   
+     />
+</merge>
+
+

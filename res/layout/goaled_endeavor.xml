@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Extend LinearLayout into baller shit -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	      android:orientation="vertical"
+	      android:layout_width="fill_parent"
+	      android:layout_height="fill_parent"
+	      >
+  
+  <!-- The name goes across the top, as it can change in size and we want the standard
+       info to have a uniform look so the start and stop buttons are all aligned easily -->
+  <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	       android:layout_width="fill_parent"
+	       android:layout_height="fill_parent"
+	       android:stretchColumns="0">
+    <TableRow>
+
+      <!-- The endeavor name -->
+      <TextView
+	 style="@style/Endeavor"
+	 android:id="@+id/name"
+	 android:padding="3dip"
+	 android:focusable="false"
+	 android:layout_gravity="left|center_vertical"
+	 android:layout_width="0dp"
+	 />
+      
+      <!-- The progress bar 
+	   android:progressDrawable="@drawable/progress_bar_states"
+	  -->
+     <!--  <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:orientation="vertical"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		   android:layout_gravity="right|center_vertical"
+		   >
+	<TableRow>-->
+	
+	<ProgressBar 
+	   android:id="@+id/progress"
+	   style="@android:style/Widget.ProgressBar.Horizontal"
+
+	   android:max="100"
+	   android:focusable="false"
+	   android:layout_gravity="right|center_vertical"
+	   android:padding="3dip"
+	 
+	   />
+	<RadioButton
+	   android:id="@+id/state"
+	   android:focusable="false"
+	   android:layout_gravity="right|center_vertical"
+	   />
+    </TableRow>
+  </TableLayout>
+  
+  <!-- Now use this snaz -->
+  <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	       android:id="@+id/details"
+	       android:layout_width="fill_parent"
+	       android:layout_height="fill_parent"
+	       android:stretchColumns="1">
+
+    <!-- Cumulative time -->
+    <TableRow>
+     <!--  <TextView
+	 android:text="@string/start"
+	 android:gravity="left"
+	 android:padding="3dip"
+	 />-->
+      <TextView
+	 android:id="@+id/duration"
+	 android:gravity="left"
+	 android:padding="3dip" />
+       <TextView
+	 android:id="@+id/tracking"
+	 android:gravity="left"
+	 android:padding="3dip"
+	  android:layout_column="3"/>
+      </TableRow>
+    <TableRow>
+      <TextView
+	 android:id="@+id/start"
+	 android:gravity="left"
+	 android:padding="3dip" />
+    </TableRow>
+  </TableLayout>
+</LinearLayout>

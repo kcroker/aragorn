@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+            android:title="@string/prefs_header_behaviour">
+      
+      <EditTextPreference
+	 android:key="recent_preference"
+	 android:digits="0123456789"
+	 android:defaultValue="3"
+	 android:title="@string/prefs_label_recent"
+	 android:summary="@string/prefs_info_recent" />
+
+      <CheckBoxPreference
+	 android:key="toggle_preference"
+	 android:defaultValue="true"
+	 android:title="@string/prefs_label_toggle"
+	 android:summary="@string/prefs_info_toggle" />
+
+      <EditTextPreference
+	 android:key="grace_preference"
+	 android:digits="0123456789"
+	 android:defaultValue="5"
+	 android:title="@string/prefs_label_grace"
+	 android:summary="@string/prefs_info_grace" />
+
+      <CheckBoxPreference
+	 android:key="dnd_preference"
+	 android:defaultValue="false"
+	 android:title="@string/prefs_label_dnd"
+	 android:summary="@string/prefs_info_dnd" />
+
+      <CheckBoxPreference
+	 android:key="alarm_preference"
+	 android:defaultValue="true"
+	 android:title="@string/prefs_label_alarm"
+	 android:summary="@string/prefs_info_alarm" />
+
+        <!-- <CheckBoxPreference
+           android:key="autotoggle_preference"
+	   android:defaultValue="false"
+           android:title="@string/prefs_label_autotoggle"
+           android:summary="@string/prefs_info_autotoggle" /> -->
+	
+	<CheckBoxPreference
+	   android:key="keyguard_preference"
+	   android:defaultValue="false"
+	   android:title="@string/prefs_label_keyguard"
+	   android:summary="@string/prefs_info_keyguard" />
+
+	
+
+        <!--            android:entries="@array/entries_list_preference"
+           android:entryValues="@array/entryvalues_list_preference"
+
+			these were down below
+-->
+<!--	<ListPreference
+           android:key="autotoggle_idle_preference"
+	   android:id="@+id/idlelist"
+	   android:dependency="autotoggle_preference"
+           android:title="@string/prefs_label_autotoggle_setidle"
+           android:dialogTitle="@string/prefs_header_autotoggle_choice" /> -->
+	</PreferenceCategory>
+    <PreferenceCategory
+       android:title="@string/prefs_header_appearance">
+
+      <CheckBoxPreference
+	 android:key="totalprogress_preference"
+	 android:defaultValue="true"
+	 android:title="@string/prefs_label_totalprogress"
+	 android:summary="@string/prefs_info_totalprogress" />
+      
+      <CheckBoxPreference
+         android:key="show_tenths_preference"
+	 android:defaultValue="false"
+         android:title="@string/prefs_label_tenths"
+         android:summary="@string/prefs_info_tenths" />
+	
+    </PreferenceCategory>
+                
+    <PreferenceCategory
+            android:title="@string/prefs_header_verify">
+      
+        <CheckBoxPreference
+           android:key="verify_del_preference"
+	   android:defaultValue="true"
+           android:title="@string/prefs_label_verify_del"
+           android:summary="@string/prefs_info_verify_del" />
+
+	<CheckBoxPreference
+           android:key="verify_reset_preference"
+           android:defaultValue="true"
+	   android:title="@string/prefs_label_verify_reset"
+           android:summary="@string/prefs_info_verify_reset" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="@string/prefs_header_export">
+
+        <!-- This PreferenceScreen tag serves as a screen break (similar to page break
+             in word processing). Like for other preference types, we assign a key
+             here so it is able to save and restore its instance state. -->
+        <PreferenceScreen
+                android:key="screen_preference"
+                android:title="@string/prefs_label_export"
+                android:summary="@string/prefs_info_export">
+	  <!-- 
+	     * track from what date?  when track pressed / earliest stamp found 
+	     * output filenames? name of endeavor / id of endeavor
+	     * include endeavor name as column
+	     * share
+	    -->
+	 <CheckBoxPreference
+	    android:key="prefs_export_globalstats"
+	    android:title="@string/prefs_export_globalstats"
+	    android:summary="@string/prefs_export_info_globalstats"
+	    android:defaultValue="true"
+	    />
+	 
+	 <CheckBoxPreference
+	    android:key="prefs_export_namecolumn"
+	    android:title="@string/prefs_export_namecolumn"
+	    android:summary="@string/prefs_export_info_namecolumn"
+	    android:defaultValue="false" />
+
+	 <CheckBoxPreference
+	    android:key="prefs_export_filename"
+	    android:title="@string/prefs_export_filename"
+	    android:summary="@string/prefs_info_export_filename"
+	    android:defaultValue="false"
+	    />
+	 
+	 <CheckBoxPreference
+	    android:key="prefs_export_timepoint"
+	    android:title="@string/prefs_export_timepoint"
+	    android:summary="@string/prefs_info_export_timepoint"
+	    android:defaultValue="false"
+	    />
+	
+	</PreferenceScreen>
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+       android:title="@string/prefs_header_help">
+      
+      <PreferenceScreen
+	 android:title="@string/prefs_label_webpage"
+	 android:summary="@string/prefs_info_webpage">
+	
+	<intent android:action="android.intent.action.VIEW"
+		android:data="@string/webpage" />
+      
+      </PreferenceScreen>
+      
+      <PreferenceScreen
+	 android:title="@string/prefs_label_upgrade"
+	 android:summary="@string/prefs_info_upgrade">
+	
+	<intent android:action="android.intent.action.VIEW"
+		android:data="https://market.android.com/details?id=net.tightbusiness.aragorn" />
+      
+      </PreferenceScreen>
+
+    </PreferenceCategory>
+</PreferenceScreen>
